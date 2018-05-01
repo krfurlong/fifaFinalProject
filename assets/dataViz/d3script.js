@@ -8,7 +8,7 @@ d3.csv('assets/dataViz/data.csv',function (data) {
 
   // Select X-axis Variable
   var span = body.append('span')
-    .text('Select X-Axis variable2: ')
+    .text('Select X-Axis variable: ')
   var yInput = body.append('select')
       .attr('id','xSelect')
       .on('change',xChange)
