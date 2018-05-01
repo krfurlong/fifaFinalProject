@@ -104,11 +104,16 @@ d3.csv('assets/dataViz/data2.csv',function (data) {
           .attr('r',5)
           .attr('stroke-width',1)
       })
-    .append('title') // Tooltip EDITED UP TIL HERE
+    .append('title') // Tooltip ELO Rating", "Yearly Change in ELO", "Total Games Played", "Win Ratio", "Lose Ratio", "Draw Ratio", "Mean Goals Scored per Game", "Mean Goals Allowed per Game"
       .text(function (d) { return d.Nation +
-                           '\nReturn: ' + formatPercent(d['Annualized Return']) +
-                           '\nStd. Dev.: ' + formatPercent(d['Annualized Standard Deviation']) +
-                           '\nMax Drawdown: ' + formatPercent(d['Maximum Drawdown']) })
+                           '\nWorld Rank: ' + formatFloat(d['World Rank']) +
+                           '\nCurrent ELO: ' + formatFloat(d['ELO Rating']) +
+                           '\nYearly Change in ELO": ' + formatFloat(d['Yearly Change in ELO']) +
+                           '\nGames Played: ' + formatFloat(d['Total Games Played']) +
+                           '\nWin Ratio: ' + formatFloat(d['Win Ratio']) +
+                           '\nDraw Ratio: ' + formatFloat(d['Draw Ratio']) +
+                           '\nGoals per Game: ' + formatFloat(d['Mean Goals Scored per Game']) +
+                           '\nGoals Allowed per Game: ' + formatFloat(d['Mean Goals Allowed per Game']) })
   // X-axis
   svg.append('g')
       .attr('class','axis')
@@ -121,7 +126,7 @@ d3.csv('assets/dataViz/data2.csv',function (data) {
       .attr('x',w)
       .attr('dy','.71em')
       .style('text-anchor','end')
-      .text('Annualized Return')
+      .text('ELO Rating')
   // Y-axis
   svg.append('g')
       .attr('class','axis')
@@ -134,7 +139,7 @@ d3.csv('assets/dataViz/data2.csv',function (data) {
       .attr('y',5)
       .attr('dy','.71em')
       .style('text-anchor','end')
-      .text('Annualized Return')
+      .text('ELO Rating')
 
   function yChange() {
     var value = this.value // get the new y value
