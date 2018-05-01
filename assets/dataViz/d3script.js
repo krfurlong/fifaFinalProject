@@ -1,6 +1,6 @@
 d3.csv('assets/dataViz/data.csv',function (data) {
 // CSV section
-  var body = d3.select('body')
+  var body = d3.select('#area1')
   var selectData = [ { "text" : "Annualized Return" },
                      { "text" : "Annualized Standard Deviation" },
                      { "text" : "Maximum Drawdown" },
@@ -35,7 +35,7 @@ d3.csv('assets/dataViz/data.csv',function (data) {
   body.append('br')
 
   // Variables
-  var body = d3.select('body')
+  var body = d3.select('#area1')
   var margin = { top: 50, right: 50, bottom: 50, left: 50 }
   var h = 500 - margin.top - margin.bottom
   var w = 500 - margin.left - margin.right
