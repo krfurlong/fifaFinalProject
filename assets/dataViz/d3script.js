@@ -1,4 +1,4 @@
-d3.csv('data.csv',function (data) {
+d3.csv('assets/dataVix/data.csv',function (data) {
 // CSV section
   var body = d3.select('body')
   var selectData = [ { "text" : "Annualized Return" },
