@@ -1,9 +1,16 @@
-d3.csv('assets/dataViz/data.csv',function (data) {
+d3.csv('assets/dataViz/data2.csv',function (data) {
 // CSV section
   var body = d3.select('#area1')
-  var selectData = [ { "text" : "Annualized Return" },
-                     { "text" : "Annualized Standard Deviation" },
-                     { "text" : "Maximum Drawdown" },
+  var selectData = [ { "text" : "World Rank" },
+                     { "text" : "ELO Rating" },
+                     { "text" : "Yearly Change in ELO" },
+                     { "text" : "Total Games Played" },
+                     { "text" : "Win Ratio" },
+                     { "text" : "Lose Ratio" },
+                     { "text" : "Draw Ratio" },
+                     { "text" : "Mean Goals Scored per Game" },
+                     { "text" : "Mean Goals Allowed per Game" },
+                    
                    ]
 
   // Select X-axis Variable
@@ -39,19 +46,19 @@ d3.csv('assets/dataViz/data.csv',function (data) {
   var margin = { top: 50, right: 50, bottom: 50, left: 50 }
   var h = 500 - margin.top - margin.bottom
   var w = 500 - margin.left - margin.right
-  var formatPercent = d3.format('.2%')
+  var formatFloat = d3.format('.2f')
   // Scales
   var colorScale = d3.scale.category20()
   var xScale = d3.scale.linear()
     .domain([
-      d3.min([0,d3.min(data,function (d) { return d['Annualized Return'] })]),
-      d3.max([0,d3.max(data,function (d) { return d['Annualized Return'] })])
+      d3.min([0,d3.min(data,function (d) { return d['ELO Rating'] })]),
+      d3.max([0,d3.max(data,function (d) { return d['ELO Rating'] })])
       ])
     .range([0,w])
   var yScale = d3.scale.linear()
     .domain([
-      d3.min([0,d3.min(data,function (d) { return d['Annualized Return'] })]),
-      d3.max([0,d3.max(data,function (d) { return d['Annualized Return'] })])
+      d3.min([0,d3.min(data,function (d) { return d['ELO Rating'] })]),
+      d3.max([0,d3.max(data,function (d) { return d['ELO Rating'] })])
       ])
     .range([h,0])
   // SVG
@@ -63,13 +70,13 @@ d3.csv('assets/dataViz/data.csv',function (data) {
   // X-axis
   var xAxis = d3.svg.axis()
     .scale(xScale)
-    .tickFormat(formatPercent)
+    .tickFormat(formatFloat)
     .ticks(5)
     .orient('bottom')
   // Y-axis
   var yAxis = d3.svg.axis()
     .scale(yScale)
-    .tickFormat(formatPercent)
+    .tickFormat(formatFloat)
     .ticks(5)
     .orient('left')
   // Circles
@@ -77,9 +84,9 @@ d3.csv('assets/dataViz/data.csv',function (data) {
       .data(data)
       .enter()
     .append('circle')
-      .attr('cx',function (d) { return xScale(d['Annualized Return']) })
-      .attr('cy',function (d) { return yScale(d['Annualized Return']) })
-      .attr('r','10')
+      .attr('cx',function (d) { return xScale(d['ELO Rating']) })
+      .attr('cy',function (d) { return yScale(d['ELO Rating']) })
+      .attr('r','5')
       .attr('stroke','black')
       .attr('stroke-width',1)
       .attr('fill',function (d,i) { return colorScale(i) })
@@ -87,18 +94,18 @@ d3.csv('assets/dataViz/data.csv',function (data) {
         d3.select(this)
           .transition()
           .duration(500)
-          .attr('r',20)
+          .attr('r',15)
           .attr('stroke-width',3)
       })
       .on('mouseout', function () {
         d3.select(this)
           .transition()
           .duration(500)
-          .attr('r',10)
+          .attr('r',5)
           .attr('stroke-width',1)
       })
-    .append('title') // Tooltip
-      .text(function (d) { return d.variable +
+    .append('title') // Tooltip EDITED UP TIL HERE
+      .text(function (d) { return d.Nation +
                            '\nReturn: ' + formatPercent(d['Annualized Return']) +
                            '\nStd. Dev.: ' + formatPercent(d['Annualized Standard Deviation']) +
                            '\nMax Drawdown: ' + formatPercent(d['Maximum Drawdown']) })
