@@ -3,7 +3,7 @@ d3.csv('assets/dataViz/data2.csv',function (data) {
   var body = d3.select('#area1')
   var selectData = [ { "text" : "World Rank" },
                      { "text" : "ELO Rating" },
-                     { "text" : "Yearly Change in ELO" },
+                   //  { "text" : "Yearly Change in ELO" },
                      { "text" : "Total Games Played" },
                      { "text" : "Win Ratio" },
                      { "text" : "Lose Ratio" },
@@ -51,14 +51,14 @@ d3.csv('assets/dataViz/data2.csv',function (data) {
   var colorScale = d3.scale.category20()
   var xScale = d3.scale.linear()
     .domain([
-      d3.min([0,d3.min(data,function (d) { return d['ELO Rating'] })]),
-      d3.max([0,d3.max(data,function (d) { return d['ELO Rating'] })])
+      d3.min([0,d3.min(data,function (d) { return d['World Rank'] })]),
+      d3.max([0,d3.max(data,function (d) { return d['World Rank'] })])
       ])
     .range([0,w])
   var yScale = d3.scale.linear()
     .domain([
-      d3.min([0,d3.min(data,function (d) { return d['ELO Rating'] })]),
-      d3.max([0,d3.max(data,function (d) { return d['ELO Rating'] })])
+      d3.min([0,d3.min(data,function (d) { return d['World Rank'] })]),
+      d3.max([0,d3.max(data,function (d) { return d['World Rank'] })])
       ])
     .range([h,0])
   // SVG
@@ -84,8 +84,8 @@ d3.csv('assets/dataViz/data2.csv',function (data) {
       .data(data)
       .enter()
     .append('circle')
-      .attr('cx',function (d) { return xScale(d['ELO Rating']) })
-      .attr('cy',function (d) { return yScale(d['ELO Rating']) })
+      .attr('cx',function (d) { return xScale(d['World Rank']) })
+      .attr('cy',function (d) { return yScale(d['World Rank']) })
       .attr('r','5')
       .attr('stroke','black')
       .attr('stroke-width',1)
@@ -108,7 +108,7 @@ d3.csv('assets/dataViz/data2.csv',function (data) {
       .text(function (d) { return d.Nation +
                            '\nWorld Rank: ' + formatFloat(d['World Rank']) +
                            '\nCurrent ELO: ' + formatFloat(d['ELO Rating']) +
-                           '\nYearly Change in ELO: ' + formatFloat(d['Yearly Change in ELO']) +
+                           //'\nYearly Change in ELO: ' + formatFloat(d['Yearly Change in ELO']) +
                            '\nGames Played: ' + formatFloat(d['Total Games Played']) +
                            '\nWin Ratio: ' + formatFloat(d['Win Ratio']) +
                            '\nDraw Ratio: ' + formatFloat(d['Draw Ratio']) +
@@ -126,7 +126,7 @@ d3.csv('assets/dataViz/data2.csv',function (data) {
       .attr('x',w)
       .attr('dy','.71em')
       .style('text-anchor','end')
-      .text('ELO Rating')
+      .text('World Rank')
   // Y-axis
   svg.append('g')
       .attr('class','axis')
@@ -139,7 +139,7 @@ d3.csv('assets/dataViz/data2.csv',function (data) {
       .attr('y',5)
       .attr('dy','.71em')
       .style('text-anchor','end')
-      .text('ELO Rating')
+      .text('World Rank')
 
   function yChange() {
     var value = this.value // get the new y value
@@ -155,8 +155,8 @@ d3.csv('assets/dataViz/data2.csv',function (data) {
     d3.select('#yAxisLabel') // change the yAxisLabel
       .text(value)    
     d3.selectAll('circle') // move the circles
-      .transition().duration(500)
-      .delay(function (d,i) { return i*25})
+      .transition().duration(400)
+      .delay(function (d,i) { return i*10})
         .attr('cy',function (d) { return yScale(d[value]) })
   }
 
@@ -175,8 +175,8 @@ d3.csv('assets/dataViz/data2.csv',function (data) {
       .transition().duration(1000)
       .text(value)
     d3.selectAll('circle') // move the circles
-      .transition().duration(500)
-      .delay(function (d,i) { return i*25})
+      .transition().duration(400)
+      .delay(function (d,i) { return i*10})
         .attr('cx',function (d) { return xScale(d[value]) })
   }
 })
