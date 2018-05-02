@@ -1,33 +1,193 @@
-	Country	World Cup Appearances	Field of 16 Appearances	Quarterfinal Appearances	Semifianl Appearances	Final Appearances	World Cup Champions
-1	France	6	3	2	3	0	0
-2	Brazil	12	11	10	4	4	3
-3	Spain	8	5	4	0	0	0
-4	Germany	1	1	1	0	0	0
-5	Croatia	0	0	0	0	0	0
-6	England	9	7	6	2	1	1
-7	Argentina	9	6	6	2	3	2
-8	Mexico	9	3	2	0	0	0
-9	Denmark	1	1	0	0	0	0
-10	Belgium	6	4	1	1	0	0
-11	Morocco	3	1	0	0	0	0
-12	Iran	1	0	0	0	0	0
-13	Colombia	3	1	0	0	0	0
-14	Saudi Arabia	1	1	0	0	0	0
-15	Nigeria	1	1	0	0	0	0
-16	Japan	0	0	0	0	0	0
-17	South Korea	4	0	0	0	0	0
-18	Tunisia	1	0	0	0	0	0
-19	Egypt	0	0	0	0	0	0
-20	Senegal	0	0	0	0	0	0
-21	Australia	0	0	0	0	0	0
-22	Iceland	0	0	0	0	0	0
-23	Poland	0	0	0	0	0	0
-24	Portugal	0	0	0	0	0	0
-25	Russia	0	0	0	0	0	0
-26	Serbia	0	0	0	0	0	0
-27	Sweden	0	0	0	0	0	0
-28	Switzerland	0	0	0	0	0	0
-29	Costa Rica	0	0	0	0	0	0
-30	Panama	0	0	0	0	0	0
-31	Peru	0	0	0	0	0	0
-32	Uruguay	0	0	0	0	0	0
+	Country	stage	value
+1	Argentina	World Cup Appearances	9
+2	Brazil	World Cup Appearances	12
+3	England	World Cup Appearances	9
+4	France	World Cup Appearances	6
+5	Germany	World Cup Appearances	1
+6	Spain	World Cup Appearances	8
+7	Portugal	World Cup Appearances	0
+8	Poland	World Cup Appearances	0
+9	Colombia	World Cup Appearances	3
+10	Sweden	World Cup Appearances	0
+11	Croatia	World Cup Appearances	0
+12	Uruguay	World Cup Appearances	0
+13	Denmark	World Cup Appearances	1
+14	Belgium	World Cup Appearances	6
+15	Mexico	World Cup Appearances	9
+16	Peru	World Cup Appearances	0
+17	Russia	World Cup Appearances	0
+18	Switzerland	World Cup Appearances	0
+19	Costa Rica	World Cup Appearances	0
+20	Egypt	World Cup Appearances	0
+21	South Korea	World Cup Appearances	4
+22	Japan	World Cup Appearances	0
+23	Nigeria	World Cup Appearances	1
+24	Morocco	World Cup Appearances	3
+25	Australia	World Cup Appearances	0
+26	Iran	World Cup Appearances	1
+27	Iceland	World Cup Appearances	0
+28	Serbia	World Cup Appearances	0
+29	Tunisia	World Cup Appearances	1
+30	Senegal	World Cup Appearances	0
+31	Panama	World Cup Appearances	0
+32	Saudi Arabia	World Cup Appearances	1
+33	Argentina	Field of 16 Appearances	6
+34	Brazil	Field of 16 Appearances	11
+35	England	Field of 16 Appearances	7
+36	France	Field of 16 Appearances	3
+37	Germany	Field of 16 Appearances	1
+38	Spain	Field of 16 Appearances	5
+39	Portugal	Field of 16 Appearances	0
+40	Poland	Field of 16 Appearances	0
+41	Colombia	Field of 16 Appearances	1
+42	Sweden	Field of 16 Appearances	0
+43	Croatia	Field of 16 Appearances	0
+44	Uruguay	Field of 16 Appearances	0
+45	Denmark	Field of 16 Appearances	1
+46	Belgium	Field of 16 Appearances	4
+47	Mexico	Field of 16 Appearances	3
+48	Peru	Field of 16 Appearances	0
+49	Russia	Field of 16 Appearances	0
+50	Switzerland	Field of 16 Appearances	0
+51	Costa Rica	Field of 16 Appearances	0
+52	Egypt	Field of 16 Appearances	0
+53	South Korea	Field of 16 Appearances	0
+54	Japan	Field of 16 Appearances	0
+55	Nigeria	Field of 16 Appearances	1
+56	Morocco	Field of 16 Appearances	1
+57	Australia	Field of 16 Appearances	0
+58	Iran	Field of 16 Appearances	0
+59	Iceland	Field of 16 Appearances	0
+60	Serbia	Field of 16 Appearances	0
+61	Tunisia	Field of 16 Appearances	0
+62	Senegal	Field of 16 Appearances	0
+63	Panama	Field of 16 Appearances	0
+64	Saudi Arabia	Field of 16 Appearances	1
+65	Argentina	Quarterfinal Appearances	6
+66	Brazil	Quarterfinal Appearances	10
+67	England	Quarterfinal Appearances	6
+68	France	Quarterfinal Appearances	2
+69	Germany	Quarterfinal Appearances	1
+70	Spain	Quarterfinal Appearances	4
+71	Portugal	Quarterfinal Appearances	0
+72	Poland	Quarterfinal Appearances	0
+73	Colombia	Quarterfinal Appearances	0
+74	Sweden	Quarterfinal Appearances	0
+75	Croatia	Quarterfinal Appearances	0
+76	Uruguay	Quarterfinal Appearances	0
+77	Denmark	Quarterfinal Appearances	0
+78	Belgium	Quarterfinal Appearances	1
+79	Mexico	Quarterfinal Appearances	2
+80	Peru	Quarterfinal Appearances	0
+81	Russia	Quarterfinal Appearances	0
+82	Switzerland	Quarterfinal Appearances	0
+83	Costa Rica	Quarterfinal Appearances	0
+84	Egypt	Quarterfinal Appearances	0
+85	South Korea	Quarterfinal Appearances	0
+86	Japan	Quarterfinal Appearances	0
+87	Nigeria	Quarterfinal Appearances	0
+88	Morocco	Quarterfinal Appearances	0
+89	Australia	Quarterfinal Appearances	0
+90	Iran	Quarterfinal Appearances	0
+91	Iceland	Quarterfinal Appearances	0
+92	Serbia	Quarterfinal Appearances	0
+93	Tunisia	Quarterfinal Appearances	0
+94	Senegal	Quarterfinal Appearances	0
+95	Panama	Quarterfinal Appearances	0
+96	Saudi Arabia	Quarterfinal Appearances	0
+97	Argentina	Semifianl Appearances	2
+98	Brazil	Semifianl Appearances	4
+99	England	Semifianl Appearances	2
+100	France	Semifianl Appearances	3
+101	Germany	Semifianl Appearances	0
+102	Spain	Semifianl Appearances	0
+103	Portugal	Semifianl Appearances	0
+104	Poland	Semifianl Appearances	0
+105	Colombia	Semifianl Appearances	0
+106	Sweden	Semifianl Appearances	0
+107	Croatia	Semifianl Appearances	0
+108	Uruguay	Semifianl Appearances	0
+109	Denmark	Semifianl Appearances	0
+110	Belgium	Semifianl Appearances	1
+111	Mexico	Semifianl Appearances	0
+112	Peru	Semifianl Appearances	0
+113	Russia	Semifianl Appearances	0
+114	Switzerland	Semifianl Appearances	0
+115	Costa Rica	Semifianl Appearances	0
+116	Egypt	Semifianl Appearances	0
+117	South Korea	Semifianl Appearances	0
+118	Japan	Semifianl Appearances	0
+119	Nigeria	Semifianl Appearances	0
+120	Morocco	Semifianl Appearances	0
+121	Australia	Semifianl Appearances	0
+122	Iran	Semifianl Appearances	0
+123	Iceland	Semifianl Appearances	0
+124	Serbia	Semifianl Appearances	0
+125	Tunisia	Semifianl Appearances	0
+126	Senegal	Semifianl Appearances	0
+127	Panama	Semifianl Appearances	0
+128	Saudi Arabia	Semifianl Appearances	0
+129	Argentina	Final Appearances	3
+130	Brazil	Final Appearances	4
+131	England	Final Appearances	1
+132	France	Final Appearances	0
+133	Germany	Final Appearances	0
+134	Spain	Final Appearances	0
+135	Portugal	Final Appearances	0
+136	Poland	Final Appearances	0
+137	Colombia	Final Appearances	0
+138	Sweden	Final Appearances	0
+139	Croatia	Final Appearances	0
+140	Uruguay	Final Appearances	0
+141	Denmark	Final Appearances	0
+142	Belgium	Final Appearances	0
+143	Mexico	Final Appearances	0
+144	Peru	Final Appearances	0
+145	Russia	Final Appearances	0
+146	Switzerland	Final Appearances	0
+147	Costa Rica	Final Appearances	0
+148	Egypt	Final Appearances	0
+149	South Korea	Final Appearances	0
+150	Japan	Final Appearances	0
+151	Nigeria	Final Appearances	0
+152	Morocco	Final Appearances	0
+153	Australia	Final Appearances	0
+154	Iran	Final Appearances	0
+155	Iceland	Final Appearances	0
+156	Serbia	Final Appearances	0
+157	Tunisia	Final Appearances	0
+158	Senegal	Final Appearances	0
+159	Panama	Final Appearances	0
+160	Saudi Arabia	Final Appearances	0
+161	Argentina	World Cup Champions	2
+162	Brazil	World Cup Champions	3
+163	England	World Cup Champions	1
+164	France	World Cup Champions	0
+165	Germany	World Cup Champions	0
+166	Spain	World Cup Champions	0
+167	Portugal	World Cup Champions	0
+168	Poland	World Cup Champions	0
+169	Colombia	World Cup Champions	0
+170	Sweden	World Cup Champions	0
+171	Croatia	World Cup Champions	0
+172	Uruguay	World Cup Champions	0
+173	Denmark	World Cup Champions	0
+174	Belgium	World Cup Champions	0
+175	Mexico	World Cup Champions	0
+176	Peru	World Cup Champions	0
+177	Russia	World Cup Champions	0
+178	Switzerland	World Cup Champions	0
+179	Costa Rica	World Cup Champions	0
+180	Egypt	World Cup Champions	0
+181	South Korea	World Cup Champions	0
+182	Japan	World Cup Champions	0
+183	Nigeria	World Cup Champions	0
+184	Morocco	World Cup Champions	0
+185	Australia	World Cup Champions	0
+186	Iran	World Cup Champions	0
+187	Iceland	World Cup Champions	0
+188	Serbia	World Cup Champions	0
+189	Tunisia	World Cup Champions	0
+190	Senegal	World Cup Champions	0
+191	Panama	World Cup Champions	0
+192	Saudi Arabia	World Cup Champions	0
