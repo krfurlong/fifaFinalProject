@@ -1,6 +1,6 @@
 var margin = { top: 100, right: 0, bottom: 20, left: 100 },
           width = 850 - margin.left - margin.right,
-          height = 600 - margin.top - margin.bottom,
+          height = 800 - margin.top - margin.bottom,
           gridSize = Math.floor(width / 10),
           legendElementWidth = gridSize*1.5,
           buckets = 5,
@@ -34,7 +34,7 @@ var margin = { top: 100, right: 0, bottom: 20, left: 100 },
             .text(function(d) { return d; })
             .attr("x", function(d, i) { return i * gridSize; })
             .attr("y", 0)
-            .style("text-anchor", "start")
+            .style("text-anchor", "middle")
             .attr("transform", "translate(" + gridSize + ", -6)")
             .attr("class", "timeLabel mono axis");
 
