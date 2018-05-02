@@ -36,6 +36,7 @@ var margin = { top: 50, right: 0, bottom: 100, left: 100 },
             .attr("y", 0)
             .style("text-anchor", "middle")
             .attr("transform", "translate(" + gridSize / 2 + ", -6)")
+            .attr("transform", function(d) {return "rotate(60)" })
             .attr("class", "timeLabel mono axis");
 
       var heatmapChart = function(tsvFile) {
@@ -59,7 +60,7 @@ var margin = { top: 50, right: 0, bottom: 100, left: 100 },
 
           cards.enter().append("rect")
               .attr("x", function(d) { return (d.stage - 1) * gridSize; })
-              .attr("y", function(d) { return (d.Country - 1) * gridSize; })
+              .attr("y", function(d) { return (d.Country - 1) * gridSize/2; })
               .attr("rx", 4)
               .attr("ry", 4)
               .attr("class", "hour bordered")
