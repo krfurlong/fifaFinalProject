@@ -1,6 +1,6 @@
 var margin = { top: 100, right: 0, bottom: 20, left: 100 },
           width = 850 - margin.left - margin.right,
-          height = 800 - margin.top - margin.bottom,
+          height = 775 - margin.top - margin.bottom,
           gridSize = Math.floor(width / 10),
           legendElementWidth = gridSize*1.5,
           buckets = 5,
@@ -9,7 +9,7 @@ var margin = { top: 100, right: 0, bottom: 20, left: 100 },
                     "England", "France", "Germany","Iceland","Iran","Japan", "Mexico","Morocco","Nigeria", "Panama", "Peru","Poland",
                     "Portugal", "Russia","Saudi Arabia", "Senegal", "Serbia", "South Korea",  "Spain", "Sweden","Switzerland", 
                     "Tunisia","Uruguay" ],
-          stages = ["World Cup Appearances", "Field of 16 Appearances", "Quarterfinal Appearances", "Semifianl Appearances", "Final Appearances", "World Cup Champions"];
+          stages = ["Total Appearances", "Field of 16", "Quarterfinals", "Semifinals", "Finals", "Champions"];
           datasets = ["assets/dataViz/heat1978.tsv", "assets/dataViz/heat1998.tsv", "assets/dataViz/heat2018.tsv"];
 
       var svg = d3.select("#chart").append("svg")
@@ -23,7 +23,7 @@ var margin = { top: 100, right: 0, bottom: 20, left: 100 },
           .enter().append("text")
             .text(function (d) { return d; })
             .attr("x", 0)
-            .attr("y", function (d, i) { return i * gridSize / 4; })
+            .attr("y", function (d, i) { return (i-2) * gridSize / 4; })
             .style("text-anchor", "end")
             .attr("transform", "translate(-6," + gridSize / 1.5 + ")")
             .attr("class", "dayLabel mono axis");
@@ -105,7 +105,7 @@ var margin = { top: 100, right: 0, bottom: 20, left: 100 },
 
       datasetpicker.enter()
         .append("input")
-        .attr("value", function(d){ return "FIFA World Cup, " + d.slice(19,22); })
+        .attr("value", function(d){ return "Year: " + d.slice(19,22); })
         .attr("type", "button")
         .attr("class", "dataset-button")
         .on("click", function(d) {
