@@ -1,4 +1,4 @@
-var margin = { top: 100, right: 0, bottom: 100, left: 100 },
+var margin = { top: 100, right: 0, bottom: 20, left: 100 },
           width = 1200 - margin.left - margin.right,
           height = 1050 - margin.top - margin.bottom,
           gridSize = Math.floor(width / 10),
@@ -23,9 +23,9 @@ var margin = { top: 100, right: 0, bottom: 100, left: 100 },
           .enter().append("text")
             .text(function (d) { return d; })
             .attr("x", 0)
-            .attr("y", function (d, i) { return i * gridSize / 1.3; })
+            .attr("y", function (d, i) { return i * gridSize / 1.5; })
             .style("text-anchor", "end")
-            .attr("transform", "translate(-6," + gridSize / 1.5 + ")")
+            .attr("transform", "translate(-6," + gridSize / 1.25 + ")")
             .attr("class", "dayLabel mono axis");
 
       var timeLabels = svg.selectAll(".timeLabel")
