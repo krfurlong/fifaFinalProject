@@ -1,8 +1,8 @@
-var margin = { top: 100, right: 0, bottom: 20, left: 100 },
-          width = 1200 - margin.left - margin.right,
-          height = 1050 - margin.top - margin.bottom,
+var margin = { top: 50, right: 0, bottom: 20, left: 100 },
+          width = 850 - margin.left - margin.right,
+          height = 600 - margin.top - margin.bottom,
           gridSize = Math.floor(width / 10),
-          legendElementWidth = gridSize*2,
+          legendElementWidth = gridSize*1.75,
           buckets = 5,
           colors = ["#fee5d9","#fcae91","#fb6a4a","#de2d26","#a50f15"], // adjusted from yellow-green-blue to reds colorbrewer
           teams = ["Argentina", "Australia", "Belgium", "Brazil", "Colombia", "Costa Rica", "Croatia", "Denmark", "Egypt", 
@@ -23,9 +23,9 @@ var margin = { top: 100, right: 0, bottom: 20, left: 100 },
           .enter().append("text")
             .text(function (d) { return d; })
             .attr("x", 0)
-            .attr("y", function (d, i) { return i * gridSize / 1.5; })
+            .attr("y", function (d, i) { return i * gridSize / 4; })
             .style("text-anchor", "end")
-            .attr("transform", "translate(-6," + gridSize / 1.25 + ")")
+            .attr("transform", "translate(-6," + gridSize / 1.5 + ")")
             .attr("class", "dayLabel mono axis");
 
       var timeLabels = svg.selectAll(".timeLabel")
@@ -34,7 +34,7 @@ var margin = { top: 100, right: 0, bottom: 20, left: 100 },
             .text(function(d) { return d; })
             .attr("x", function(d, i) { return i * gridSize; })
             .attr("y", 0)
-            .style("text-anchor", "middle")
+            .style("text-anchor", "start")
             .attr("transform", "translate(" + gridSize + ", -6)")
             .attr("class", "timeLabel mono axis");
 
