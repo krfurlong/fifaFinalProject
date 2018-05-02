@@ -1,8 +1,8 @@
-var margin = { top: 50, right: 0, bottom: 30, left: 100 },
+var margin = { top: 50, right: 0, bottom: 50, left: 100 },
           width = 920 - margin.left - margin.right,
           height = 800 - margin.top - margin.bottom,
           gridSize = Math.floor(width / 10),
-          legendElementWidth = gridSize*1.5,
+          legendElementWidth = gridSize*1,
           buckets = 5,
           colors = ["#fee5d9","#fcae91","#fb6a4a","#de2d26","#a50f15"], // adjusted from yellow-green-blue to reds colorbrewer
           teams = ["Argentina", "Australia", "Belgium", "Brazil", "Colombia", "Costa Rica", "Croatia", "Denmark", "Egypt", 
