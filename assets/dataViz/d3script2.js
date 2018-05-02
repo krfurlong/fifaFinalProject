@@ -155,8 +155,8 @@ d3.csv('assets/dataViz/data2.csv',function (data) {
     d3.select('#yAxisLabel') // change the yAxisLabel
       .text(value)    
     d3.selectAll('circle') // move the circles
-      .transition().duration(1000)
-      .delay(function (d,i) { return i*100})
+      .transition().duration(500)
+      .delay(function (d,i) { return i*25})
         .attr('cy',function (d) { return yScale(d[value]) })
   }
 
@@ -176,7 +176,7 @@ d3.csv('assets/dataViz/data2.csv',function (data) {
       .text(value)
     d3.selectAll('circle') // move the circles
       .transition().duration(500)
-      .delay(function (d,i) { return i*10})
+      .delay(function (d,i) { return i*25})
         .attr('cx',function (d) { return xScale(d[value]) })
   }
 })
