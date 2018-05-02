@@ -1,7 +1,7 @@
 var margin = { top: 150, right: 0, bottom: 100, left: 100 },
           width = 900 - margin.left - margin.right,
           height = 1050 - margin.top - margin.bottom,
-          gridSize = Math.floor(width / 20),
+          gridSize = Math.floor(width / 10),
           legendElementWidth = gridSize*2,
           buckets = 5,
           colors = ["#fee5d9","#fcae91","#fb6a4a","#de2d26","#a50f15"], // adjusted from yellow-green-blue to reds colorbrewer
@@ -23,7 +23,7 @@ var margin = { top: 150, right: 0, bottom: 100, left: 100 },
           .enter().append("text")
             .text(function (d) { return d; })
             .attr("x", 0)
-            .attr("y", function (d, i) { return i * gridSize / 2; })
+            .attr("y", function (d, i) { return i * gridSize / 1.3; })
             .style("text-anchor", "end")
             .attr("transform", "translate(-6," + gridSize / 1.5 + ")")
             .attr("class", "dayLabel mono axis");
@@ -59,12 +59,12 @@ var margin = { top: 150, right: 0, bottom: 100, left: 100 },
 
           cards.enter().append("rect")
               .attr("x", function(d) { return (d.stage - 1) * gridSize; })
-              .attr("y", function(d) { return (d.Country - 1) * gridSize/2; })
+              .attr("y", function(d) { return (d.Country - 1) * gridSize/4; })
               .attr("rx", 4)
               .attr("ry", 4)
               .attr("class", "hour bordered")
               .attr("width", gridSize)
-              .attr("height", gridSize/2)
+              .attr("height", gridSize/4)
               .style("fill", colors[0]);
 
           cards.transition().duration(1000)
@@ -84,7 +84,7 @@ var margin = { top: 150, right: 0, bottom: 100, left: 100 },
             .attr("x", function(d, i) { return legendElementWidth * i; })
             .attr("y", height)
             .attr("width", legendElementWidth)
-            .attr("height", gridSize / 2)
+            .attr("height", gridSize / 4)
             .style("fill", function(d, i) { return colors[i]; });
 
           legend.append("text")
