@@ -1,7 +1,7 @@
-var margin = { top: 50, right: 0, bottom: 100, left: 50 },
-          width = 800 - margin.left - margin.right,
-          height = 1000 - margin.top - margin.bottom,
-          gridSize = Math.floor(width / 24),
+var margin = { top: 50, right: 0, bottom: 100, left: 100 },
+          width = 900 - margin.left - margin.right,
+          height = 950 - margin.top - margin.bottom,
+          gridSize = Math.floor(width / 20),
           legendElementWidth = gridSize*2,
           buckets = 5,
           colors = ["#fee5d9","#fcae91","#fb6a4a","#de2d26","#a50f15"], // adjusted from yellow-green-blue to reds colorbrewer
@@ -23,7 +23,7 @@ var margin = { top: 50, right: 0, bottom: 100, left: 50 },
           .enter().append("text")
             .text(function (d) { return d; })
             .attr("x", 0)
-            .attr("y", function (d, i) { return i * gridSize; })
+            .attr("y", function (d, i) { return i * gridSize / 2; })
             .style("text-anchor", "end")
             .attr("transform", "translate(-6," + gridSize / 1.5 + ")")
             .attr("class", "dayLabel mono axis");
@@ -64,7 +64,7 @@ var margin = { top: 50, right: 0, bottom: 100, left: 50 },
               .attr("ry", 4)
               .attr("class", "hour bordered")
               .attr("width", gridSize)
-              .attr("height", gridSize)
+              .attr("height", gridSize/2)
               .style("fill", colors[0]);
 
           cards.transition().duration(1000)
