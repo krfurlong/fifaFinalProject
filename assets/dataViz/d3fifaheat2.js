@@ -36,7 +36,6 @@ var margin = { top: 150, right: 0, bottom: 100, left: 100 },
             .attr("y", 0)
             .style("text-anchor", "middle")
             .attr("transform", "translate(" + gridSize + ", -6)")
-            .attr("transform", function(d) {return "rotate(60)" })
             .attr("class", "timeLabel mono axis");
 
       var heatmapChart = function(tsvFile) {
