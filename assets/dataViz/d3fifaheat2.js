@@ -1,5 +1,5 @@
-var margin = { top: 100, right: 0, bottom: 20, left: 100 },
-          width = 850 - margin.left - margin.right,
+var margin = { top: 100, right: 0, bottom: 20, left: 80 },
+          width = 900 - margin.left - margin.right,
           height = 775 - margin.top - margin.bottom,
           gridSize = Math.floor(width / 10),
           legendElementWidth = gridSize*1.5,
@@ -9,7 +9,7 @@ var margin = { top: 100, right: 0, bottom: 20, left: 100 },
                     "England", "France", "Germany","Iceland","Iran","Japan", "Mexico","Morocco","Nigeria", "Panama", "Peru","Poland",
                     "Portugal", "Russia","Saudi Arabia", "Senegal", "Serbia", "South Korea",  "Spain", "Sweden","Switzerland", 
                     "Tunisia","Uruguay" ],
-          stages = ["Total Appearances", "Field of 16", "Quarterfinals", "Semifinals", "Finals", "Champions"];
+          stages = ["Group Stage", "Field of 16", "Quarterfinals", "Semifinals", "Finals", "Champions"];
           datasets = ["assets/dataViz/heat1978.tsv", "assets/dataViz/heat1998.tsv", "assets/dataViz/heat2018.tsv"];
 
       var svg = d3.select("#chart").append("svg")
@@ -35,7 +35,7 @@ var margin = { top: 100, right: 0, bottom: 20, left: 100 },
             .attr("x", function(d, i) { return i * gridSize; })
             .attr("y", 0)
             .style("text-anchor", "middle")
-            .attr("transform", "translate(" + gridSize + ", -6)")
+            .attr("transform", "translate(" + gridSize/2 + ", -6)")
             .attr("class", "timeLabel mono axis");
 
       var heatmapChart = function(tsvFile) {
