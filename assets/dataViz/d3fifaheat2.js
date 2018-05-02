@@ -1,5 +1,5 @@
 var margin = { top: 50, right: 0, bottom: 50, left: 100 },
-          width = 920 - margin.left - margin.right,
+          width = 950 - margin.left - margin.right,
           height = 800 - margin.top - margin.bottom,
           gridSize = Math.floor(width / 10),
           legendElementWidth = gridSize*1,
@@ -105,7 +105,7 @@ var margin = { top: 50, right: 0, bottom: 50, left: 100 },
 
       datasetpicker.enter()
         .append("input")
-        .attr("value", function(d){ return "Year: " + d.slice(19,22); })
+        .attr("value", function(d){ return "Year: " + d.slice(19,23); })
         .attr("type", "button")
         .attr("class", "dataset-button")
         .on("click", function(d) {
