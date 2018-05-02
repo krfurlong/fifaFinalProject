@@ -105,7 +105,7 @@ var margin = { top: 100, right: 0, bottom: 20, left: 100 },
 
       datasetpicker.enter()
         .append("input")
-        .attr("value", function(d){ return "Cumulative Results in " + d.slice(19,22); })
+        .attr("value", function(d){ return "FIFA World Cup, " + d.slice(19,22); })
         .attr("type", "button")
         .attr("class", "dataset-button")
         .on("click", function(d) {
