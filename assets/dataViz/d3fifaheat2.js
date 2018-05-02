@@ -92,7 +92,7 @@ var margin = { top: 50, right: 0, bottom: 50, left: 100 },
             .text(function(d) { return Math.round(d); })
             .style("fill", "white")
             .attr("x", function(d, i) { return legendElementWidth * i; })
-            .attr("y", height + gridSize);
+            .attr("y", height + gridSize/4);
 
           legend.exit().remove();
 
