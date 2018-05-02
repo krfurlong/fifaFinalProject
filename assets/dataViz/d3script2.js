@@ -108,7 +108,7 @@ d3.csv('assets/dataViz/data2.csv',function (data) {
       .text(function (d) { return d.Nation +
                            '\nWorld Rank: ' + formatFloat(d['World Rank']) +
                            '\nCurrent ELO: ' + formatFloat(d['ELO Rating']) +
-                           '\nYearly Change in ELO": ' + formatFloat(d['Yearly Change in ELO']) +
+                           '\nYearly Change in ELO: ' + formatFloat(d['Yearly Change in ELO']) +
                            '\nGames Played: ' + formatFloat(d['Total Games Played']) +
                            '\nWin Ratio: ' + formatFloat(d['Win Ratio']) +
                            '\nDraw Ratio: ' + formatFloat(d['Draw Ratio']) +
@@ -175,8 +175,8 @@ d3.csv('assets/dataViz/data2.csv',function (data) {
       .transition().duration(1000)
       .text(value)
     d3.selectAll('circle') // move the circles
-      .transition().duration(1000)
-      .delay(function (d,i) { return i*100})
+      .transition().duration(500)
+      .delay(function (d,i) { return i*10})
         .attr('cx',function (d) { return xScale(d[value]) })
   }
 })
