@@ -1,7 +1,7 @@
 function filterJSON(json, key, value) {
   var result = [];
   json.forEach(function(val,idx,arr){
-    if(val[key] == value){
+    if(val[key] == value){dat
     
       result.push(val)
     }
@@ -45,7 +45,7 @@ var svg = d3.select("#linePlot")
               "translate(" + margin.left + "," + margin.top + ")");
 var data;
 // Get the data
-d3.json("data.json", function(error, json) {
+d3.json("assets/dataViz/data.json", function(error, json) {
   console.log(json)
  
   json.forEach(function(d) {
