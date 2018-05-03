@@ -25,8 +25,8 @@ var y = d3.scale.linear().range([height, 0]);
 
 // Define the axes
 var xAxis = d3.svg.axis().scale(x)
-    .orient("bottom").ticks(5)
-    .tickFormat(d3.time.format("%Y"))
+    .orient("bottom").ticks(10)
+    //.tickFormat(d3.time.format("%Y"))
 
 var yAxis = d3.svg.axis().scale(y)
     .orient("left").ticks(5)
@@ -48,7 +48,7 @@ var svg2 = d3.select("#linePlot")
               "translate(" + margin.left + "," + margin.top + ")");
 var data;
 // Get the data
-d3.json("assets/dataViz/rfPred3.json", function(error, json) {
+d3.json("assets/dataViz/rfPred4.json", function(error, json) {
   console.log(json)
  
   json.forEach(function(d) {
