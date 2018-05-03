@@ -225,46 +225,58 @@
 		</div><!--/ .container -->
 	</div><!--/ #features -->
 	
+	<section id="analysis" name="analysis"></section>
+	<div style="background-color: #2f2f2f">
+		<div class="container">
+			<div class="row">
+				<h1 class = "centered" style="color: white"> Analysis section here!</h1>
+				<div class="col-lg-7">
+					<script src="assets/dataViz/d3.v3.js" charset="utf-8"></script>
+					<div id="chart"></div>
+					<div id="dataset-picker" style="margin: auto; width: 50%;"></div>
+					<script type='text/javascript' src='assets/dataViz/d3fifaheat2.js'></script>
+					<style>
+					      rect.bordered {
+						stroke: #E6E6E6;
+						stroke-width:2px;   
+					      }
+
+					      text.mono {
+						font-size: 9pt;
+						font-family: Consolas, courier;
+						fill: #FFFFFF;
+					      }
+
+					      text.axis-workweek {
+						fill: #000;
+						font: 9px sans-serif;
+						color: #FFFFFF;
+					      }
+
+					      text.axis-worktime {
+						fill: #000;
+						font: 8px sans-serif;
+						color: #FFFFFF;
+					      }
+					</style>
+					<br>
+					
+				</div>
+				<div class="col-lg-5">
+					<br>
+					<p style="color: white">Additional content on past FIFA performance here...To begin our analysis of the FIFA World Cup tournament from 1950 to the present, we first...</p>
+				</div>
+					
+			</div>
+		</div>
+	</div>
+	
 	<!-- STATS BY GROUP-->
 	<div id="Groups">
 		<div class="container">
 			<div class="row">
 				<br>
 				<br>
-				<div class="col-lg-6">
-					<div id="Tab1">
-					<div class='tableauPlaceholder' id='viz1525325608779' style='position: relative'>
-						<noscript>
-							<a href='#'>
-								<img alt='FootStats of the World Cup Groups ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Wo&#47;WorldCup2018Stats&#47;WorldCupGroupsStats&#47;1_rss.png' style='border: none' />
-							</a>
-						</noscript>
-						<object class='tableauViz'  style='display:none;'>
-							<param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-							<param name='embed_code_version' value='3' /> <param name='site_root' value='' />
-							<param name='name' value='WorldCup2018Stats&#47;WorldCupGroupsStats' />
-							<param name='tabs' value='no' /><param name='toolbar' value='yes' />
-							<param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Wo&#47;WorldCup2018Stats&#47;WorldCupGroupsStats&#47;1.png' />
-							<param name='animate_transition' value='yes' />
-							<param name='display_static_image' value='yes' />
-							<param name='display_spinner' value='yes' />
-							<param name='display_overlay' value='yes' />
-							<param name='display_count' value='yes' />
-							<param name='filter' value='publish=yes' />
-						</object>
-						</div>
-						<script type='text/javascript'>
-							var divElement = document.getElementById('viz1525325608779');
-							var vizElement = divElement.getElementsByTagName('object')[0];
-							vizElement.style.width='450px';vizElement.style.height='927px';
-							var scriptElement = document.createElement('script');
-							scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-							vizElement.parentNode.insertBefore(scriptElement, vizElement);
-						</script>
-					</div>
-				<p><cite><font size="3">Freepik &copy | FIFA World Cup &copy</font></cite></p>
-				</div>
-				
 				<div class="col-lg-6">
 					<h3>Groups FootStats</h3>
 					<br>
@@ -327,6 +339,41 @@
 		                <br>			
 					</div><!-- Accordion -->
 				</div>
+				<div class="col-lg-6">
+					<div id="Tab1">
+					<div class='tableauPlaceholder' id='viz1525325608779' style='position: relative'>
+						<noscript>
+							<a href='#'>
+								<img alt='FootStats of the World Cup Groups ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Wo&#47;WorldCup2018Stats&#47;WorldCupGroupsStats&#47;1_rss.png' style='border: none' />
+							</a>
+						</noscript>
+						<object class='tableauViz'  style='display:none;'>
+							<param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+							<param name='embed_code_version' value='3' /> <param name='site_root' value='' />
+							<param name='name' value='WorldCup2018Stats&#47;WorldCupGroupsStats' />
+							<param name='tabs' value='no' /><param name='toolbar' value='yes' />
+							<param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Wo&#47;WorldCup2018Stats&#47;WorldCupGroupsStats&#47;1.png' />
+							<param name='animate_transition' value='yes' />
+							<param name='display_static_image' value='yes' />
+							<param name='display_spinner' value='yes' />
+							<param name='display_overlay' value='yes' />
+							<param name='display_count' value='yes' />
+							<param name='filter' value='publish=yes' />
+						</object>
+						</div>
+						<script type='text/javascript'>
+							var divElement = document.getElementById('viz1525325608779');
+							var vizElement = divElement.getElementsByTagName('object')[0];
+							vizElement.style.width='450px';vizElement.style.height='927px';
+							var scriptElement = document.createElement('script');
+							scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+							vizElement.parentNode.insertBefore(scriptElement, vizElement);
+						</script>
+					</div>
+				<p><cite><font size="3">Freepik &copy | FIFA World Cup &copy</font></cite></p>
+				</div>
+				
+				
 			</div>
 		</div><!--/ .container -->
 	</div><!--/ #stats by groups -->
@@ -362,53 +409,6 @@
 			<br>	
 		</div><!-- /container -->
 	</div>	
-
-
-	<section id="analysis" name="analysis"></section>
-	<div style="background-color: #2f2f2f">
-		<div class="container">
-			<div class="row">
-				<h1 class = "centered" style="color: white"> Analysis section here!</h1>
-				<div class="col-lg-7">
-					<script src="assets/dataViz/d3.v3.js" charset="utf-8"></script>
-					<div id="chart"></div>
-					<div id="dataset-picker" style="margin: auto; width: 50%;"></div>
-					<script type='text/javascript' src='assets/dataViz/d3fifaheat2.js'></script>
-					<style>
-					      rect.bordered {
-						stroke: #E6E6E6;
-						stroke-width:2px;   
-					      }
-
-					      text.mono {
-						font-size: 9pt;
-						font-family: Consolas, courier;
-						fill: #FFFFFF;
-					      }
-
-					      text.axis-workweek {
-						fill: #000;
-						font: 9px sans-serif;
-						color: #FFFFFF;
-					      }
-
-					      text.axis-worktime {
-						fill: #000;
-						font: 8px sans-serif;
-						color: #FFFFFF;
-					      }
-					</style>
-					<br>
-					
-				</div>
-				<div class="col-lg-5">
-					<br>
-					<p style="color: white">Additional content on past FIFA performance here...To begin our analysis of the FIFA World Cup tournament from 1950 to the present, we first...</p>
-				</div>
-					
-			</div>
-		</div>
-	</div>
 						    
 		
 	<section id="results" name="results"></section>
