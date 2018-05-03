@@ -312,6 +312,86 @@
 	  			<h1 class = "centered"> Results section here!</h1>
 				<div class="col-lg-12">
 					<p>And here are some really interesting findings...</p>
+					<script src="assets/dataViz/jquery-1.10.2.js"></script>
+					<select id="inds">
+							<option value="apples" selected="selected">apples</option>
+							<option value="pears">pears</option>
+							<option value="tomatoes">tomatoes</option>
+					</select>
+					<div id="legendContainer" class="legendContainer">
+						<svg id="legend"></svg>
+					</div>
+					<div id="showAll">
+						<input name="showAllButton"
+						 type="button"
+						 value="Show All"
+						 onclick="showAll()" />
+					</div>
+					<div id="clearAll">
+						<input name="clearAllButton"
+						 type="button"
+						 value="Clear All"
+						 onclick="clearAll()" />
+					</div>
+					<div id="linePlot"></div>
+					<script type='text/javascript' src='assets/dataViz/d3rfResults.js'></script>
+					<style> /* set the CSS */
+						path {
+						    stroke: #ccc;
+						    stroke-width: 2;
+						    fill: none;
+						}
+
+						.axis path,
+						.axis line {
+						    fill: none;
+						    stroke: grey;
+						    stroke-width: 1;
+						    shape-rendering: crispEdges;
+						}
+						#legendContainer{
+							position:absolute;
+							top:60px;
+							left:10px;
+							overflow: auto;
+							height:490px;
+							width:110px;
+						}
+						#legend{
+							width:90px;
+							height:200px;
+						}
+						.legend {
+						    font-size: 12px;
+						    font-weight: normal;
+						    text-anchor: left;
+						}
+						.legendcheckbox{
+							cursor: pointer;
+						}
+						#showAll{
+							position:absolute;
+							top:600px;
+							left:880px;
+						}
+						#clearAll{
+							position:absolute;
+							top:600px;
+							left:950px;
+						}
+						input{
+							border-radius:5px;
+							padding:5px 10px;
+							background:#999;
+							border:0;
+							color:#fff;
+						}
+						#inds{
+							position:absolute;
+							top:10px;
+							left:10px;
+						}
+						</style>
 				</div>
 			</div>
 	</div>
