@@ -14,6 +14,8 @@ var margin = {top: 100, right: 20, bottom: 100, left: 160},
     width = 1000 - margin.left - margin.right,
     height = 700 - margin.top - margin.bottom;
 
+var formatPercent = d3.format(".0%");
+
 // Parse the date / time
 
 
@@ -27,10 +29,11 @@ var xAxis = d3.svg.axis().scale(x)
     .tickFormat(d3.time.format("%Y"))
 
 var yAxis = d3.svg.axis().scale(y)
-    .orient("left").ticks(5);
+    .orient("left").ticks(5)
+    .tickFormat(formatPercent);
 
 // Define the line
-var stateline = d3.svg.line()
+var stageline = d3.svg.line()
 		.interpolate("cardinal")
     .x(function(d) { return x(d.year); })
     .y(function(d) { return y(d.value); });
@@ -45,7 +48,7 @@ var svg2 = d3.select("#linePlot")
               "translate(" + margin.left + "," + margin.top + ")");
 var data;
 // Get the data
-d3.json("assets/dataViz/data.json", function(error, json) {
+d3.json("assets/dataViz/rfPred.json", function(error, json) {
   console.log(json)
  
   json.forEach(function(d) {
@@ -57,7 +60,7 @@ d3.json("assets/dataViz/data.json", function(error, json) {
 				var sect = document.getElementById("inds");
 				var section = sect.options[sect.selectedIndex].value;
 
-				data = filterJSON(json, 'produce', section);
+				data = filterJSON(json, 'country', section);
 
 	      
 	      //debugger
@@ -77,12 +80,12 @@ d3.json("assets/dataViz/data.json", function(error, json) {
 			});
 
 	// generate initial graph
-	data = filterJSON(json, 'produce', 'apples');
+	data = filterJSON(json, 'country', 'Brazil');
 	updateGraph(data);
 
 });
 
-var color = d3.scale.ordinal().range(["#48A36D",  "#0096ff", "#ff007e"]);
+var color = d3.scale.category20() //ordinal().range(["#48A36D",  "#0096ff", "#ff007e"]);
 
 function updateGraph(data) {
     
@@ -94,7 +97,7 @@ function updateGraph(data) {
 
     // Nest the entries by state
     dataNest = d3.nest()
-        .key(function(d) {return d.state;})
+        .key(function(d) {return d.stage;})
         .entries(data);
 
 
@@ -104,21 +107,21 @@ function updateGraph(data) {
 				})
 				
 				
- 		var state = svg2.selectAll(".line")
+ 		var stage = svg2.selectAll(".line")
       .data(result, function(d){return d.key});
 
-		state.enter().append("path")
+		stage.enter().append("path")
 			.attr("class", "line");
 
-		state.transition()
+		stage.transition()
 			.style("stroke", function(d,i) { return d.color = color(d.key); })
 			.attr("id", function(d){ return 'tag'+d.key.replace(/\s+/g, '');}) // assign ID
 			.attr("d", function(d){
 		
-				return stateline(d.values)
+				return stageline(d.values)
 			});
 
-		state.exit().remove();
+		stage.exit().remove();
 
 		var legend = d3.select("#legend2")
 			.selectAll("text")
@@ -159,7 +162,7 @@ function updateGraph(data) {
          .attr("class", "line")
          .style("stroke", function(d,i) { return d.color = color(d.key); })
         .attr("d", function(d){
-                return stateline(d.values);
+                return stageline(d.values);
          });
  
       svg2.selectAll(".line").data(result, function(d){return d.key}).exit().remove()  
@@ -207,7 +210,7 @@ function showAll(){
   d3.selectAll(".line")
 	.transition().duration(100)
 			.attr("d", function(d){
-        return stateline(d.values);
+        return stageline(d.values);
       });
   d3.select("#legend2").selectAll("rect")
   .attr("fill",function(d) {
