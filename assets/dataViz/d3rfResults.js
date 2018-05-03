@@ -1,7 +1,7 @@
 function filterJSON(json, key, value) {
   var result = [];
   json.forEach(function(val,idx,arr){
-    if(val[key] == value){dat
+    if(val[key] == value){
     
       result.push(val)
     }
