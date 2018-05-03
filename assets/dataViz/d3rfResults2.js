@@ -48,7 +48,7 @@ var svg2 = d3.select("#linePlot")
               "translate(" + margin.left + "," + margin.top + ")");
 var data;
 // Get the data
-d3.json("assets/dataViz/rfPred.json", function(error, json) {
+d3.json("assets/dataViz/rfPred3.json", function(error, json) {
   console.log(json)
  
   json.forEach(function(d) {
