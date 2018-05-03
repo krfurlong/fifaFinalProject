@@ -82,7 +82,7 @@ var margin = { top: 50, right: 0, bottom: 50, left: 100 },
 
           legend.append("rect")
             .attr("x", function(d, i) { return legendElementWidth * i; })
-            .attr("y", height)
+            .attr("y", height + 200)
             .attr("width", legendElementWidth)
             .attr("height", gridSize / 4)
             .style("fill", function(d, i) { return colors[i]; });
@@ -92,7 +92,7 @@ var margin = { top: 50, right: 0, bottom: 50, left: 100 },
             .text(function(d) { return "≥ " + Math.round(d); })
             .style("fill", "white")
             .attr("x", function(d, i) { return legendElementWidth * i + 5; })
-            .attr("y", height + gridSize/4 + 10);
+            .attr("y", height + gridSize/4 + 210);
 
           legend.exit().remove();
 
