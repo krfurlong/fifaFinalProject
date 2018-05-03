@@ -22,15 +22,15 @@ var x = d3.time.scale().range([0, width]);
 var y = d3.scale.linear().range([height, 0]);
 
 // Define the axes
-var xAxis = d3.svg2.axis().scale(x)
+var xAxis = d3.svg.axis().scale(x)
     .orient("bottom").ticks(5)
     .tickFormat(d3.time.format("%Y"))
 
-var yAxis = d3.svg2.axis().scale(y)
+var yAxis = d3.svg.axis().scale(y)
     .orient("left").ticks(5);
 
 // Define the line
-var stateline = d3.svg2.line()
+var stateline = d3.svg.line()
 		.interpolate("cardinal")
     .x(function(d) { return x(d.year); })
     .y(function(d) { return y(d.value); });
