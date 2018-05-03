@@ -36,7 +36,7 @@ var stateline = d3.svg.line()
     .y(function(d) { return y(d.value); });
 
 // Adds the svg canvas
-var svg = d3.select("body")
+var svg = d3.select("#linePlot")
     .append("svg")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
