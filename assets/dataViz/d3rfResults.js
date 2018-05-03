@@ -10,9 +10,9 @@ function filterJSON(json, key, value) {
 }
 
 // Set the dimensions of the canvas / graph
-var margin = {top: 50, right: 20, bottom: 30, left: 160},
+var margin = {top: 50, right: 20, bottom: 60, left: 160},
     width = 1000 - margin.left - margin.right,
-    height = 550 - margin.top - margin.bottom;
+    height = 600 - margin.top - margin.bottom;
 
 // Parse the date / time
 
@@ -120,7 +120,7 @@ function updateGraph(data) {
 
 		state.exit().remove();
 
-		var legend = d3.select("#legend")
+		var legend = d3.select("#legend2")
 			.selectAll("text")
 			.data(dataNest, function(d){return d.key});
 
@@ -198,7 +198,7 @@ function clearAll(){
 			.attr("d", function(d){
         return null;
       });
-  d3.select("#legend").selectAll("rect")
+  d3.select("#legend2").selectAll("rect")
   .transition().duration(100)
       .attr("fill", "#ccc");
 };
@@ -209,7 +209,7 @@ function showAll(){
 			.attr("d", function(d){
         return stateline(d.values);
       });
-  d3.select("#legend").selectAll("rect")
+  d3.select("#legend2").selectAll("rect")
   .attr("fill",function(d) {
     if (d.active == true){
        return color(d.key);
