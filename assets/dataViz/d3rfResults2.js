@@ -10,7 +10,7 @@ function filterJSON(json, key, value) {
 }
 
 // Set the dimensions of the canvas / graph
-var margin = {top: 100, right: 20, bottom: 100, left: 160},
+var margin = {top: 50, right: 20, bottom: 100, left: 160},
     width = 1000 - margin.left - margin.right,
     height = 700 - margin.top - margin.bottom;
 
