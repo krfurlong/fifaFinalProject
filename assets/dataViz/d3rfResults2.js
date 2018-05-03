@@ -15,6 +15,7 @@ var margin = {top: 100, right: 20, bottom: 100, left: 160},
     height = 700 - margin.top - margin.bottom;
 
 var formatPercent = d3.format(".0%");
+var formatYear = d3.format(".2");
 
 // Parse the date / time
 
@@ -26,7 +27,7 @@ var y = d3.scale.linear().range([height, 0]);
 // Define the axes
 var xAxis = d3.svg.axis().scale(x)
     .orient("bottom").ticks(10)
-    //.tickFormat(d3.time.format("%Y"))
+    .tickFormat(formatYear);
 
 var yAxis = d3.svg.axis().scale(y)
     .orient("left").ticks(5)
@@ -48,7 +49,7 @@ var svg2 = d3.select("#linePlot")
               "translate(" + margin.left + "," + margin.top + ")");
 var data;
 // Get the data
-d3.json("assets/dataViz/rfPred4.json", function(error, json) {
+d3.json("assets/dataViz/rfPred5.json", function(error, json) {
   console.log(json)
  
   json.forEach(function(d) {
@@ -85,7 +86,7 @@ d3.json("assets/dataViz/rfPred4.json", function(error, json) {
 
 });
 
-var color = d3.scale.category20() //ordinal().range(["#48A36D",  "#0096ff", "#ff007e"]);
+var color = d3.scale.category20(); //ordinal().range(["#48A36D",  "#0096ff", "#ff007e"]);
 
 function updateGraph(data) {
     
