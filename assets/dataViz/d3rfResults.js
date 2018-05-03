@@ -22,21 +22,21 @@ var x = d3.time.scale().range([0, width]);
 var y = d3.scale.linear().range([height, 0]);
 
 // Define the axes
-var xAxis = d3.svg.axis().scale(x)
+var xAxis = d3.svg2.axis().scale(x)
     .orient("bottom").ticks(5)
     .tickFormat(d3.time.format("%Y"))
 
-var yAxis = d3.svg.axis().scale(y)
+var yAxis = d3.svg2.axis().scale(y)
     .orient("left").ticks(5);
 
 // Define the line
-var stateline = d3.svg.line()
+var stateline = d3.svg2.line()
 		.interpolate("cardinal")
     .x(function(d) { return x(d.year); })
     .y(function(d) { return y(d.value); });
 
 // Adds the svg canvas
-var svg = d3.select("#linePlot")
+var svg2 = d3.select("#linePlot")
     .append("svg")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
@@ -104,7 +104,7 @@ function updateGraph(data) {
 				})
 				
 				
- 		var state = svg.selectAll(".line")
+ 		var state = svg2.selectAll(".line")
       .data(result, function(d){return d.key});
 
 		state.enter().append("path")
@@ -153,7 +153,7 @@ function updateGraph(data) {
       })
       
        // Hide or show the lines based on the ID
-       svg.selectAll(".line").data(result, function(d){return d.key})
+       svg2.selectAll(".line").data(result, function(d){return d.key})
          .enter()
          .append("path")
          .attr("class", "line")
@@ -162,7 +162,7 @@ function updateGraph(data) {
                 return stateline(d.values);
          });
  
-      svg.selectAll(".line").data(result, function(d){return d.key}).exit().remove()  
+      svg2.selectAll(".line").data(result, function(d){return d.key}).exit().remove()  
 					
 			})
 		        
@@ -178,16 +178,16 @@ function updateGraph(data) {
 
 		legend.exit().remove();
 
-		svg.selectAll(".axis").remove();
+		svg2.selectAll(".axis").remove();
 
     // Add the X Axis
-    svg.append("g")
+    svg2.append("g")
         .attr("class", "x axis")
         .attr("transform", "translate(0," + height + ")")
         .call(xAxis);
 
     // Add the Y Axis
-    svg.append("g")
+    svg2.append("g")
         .attr("class", "y axis")
         .call(yAxis);
 };
