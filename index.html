@@ -118,11 +118,48 @@
 	    </div> <!--/ .container -->
 	</div><!--/ #introwrap -->
 	
+	<div id="dataquality">
+		<div class="container">
+			<div class="row centered">
+				<h1>Data Collection & Cleaning</h1>
+				<br>
+				<div class="col-lg-12">
+					<p>We synthesized multiple sources of data in order to better characterize the skills of the teams participating in the FIFA World Cup from 1950 to the present. This time period was selected due to the consistently evolving nature of the tournament, which resulted in the tournaments prior to 1950 taking on a largely different format as the tournament audiences are familiar with today. In particular, we collected data from 
+					<ul>
+					<li><a href="http://www.eloratings.net/">eloratings.net</a> which archives historical performance metrics of regional and international teams from 1910 to the present.</li>
+					<li><a href="https://www.kaggle.com/abecklas/fifa-world-cup">Kaggle’s data dump for FIFA World Cup statistics</a>, in which users offer up sources of data which are subsequently evaluated and cleaned by Kaggle staff.</li>
+					</ul>
+					For transparency and objectivity in our analysis, we summarize our work with the data and assess its potential flaws below.</p>
+					<h3>Completeness</h3>
+					<p>We found that these data sources were incredibly accurate in identifying the results of each FIFA World Cup game and appearance for each team involved. Fortunately, the World Cup is a major sporting event in the international community which drives many individuals to be passionate about the statistics relating to the event. This helps to ensure the data is comprehensive, not lacking any key statistics or metrics, and quickly update these databases when changes occur. In our data cleaning and manipulation, we also made the choice to omit countries in our final web visualizations who lack any representation at the World Cup during this time period. While including these lesser known, not as successful on the international stage teams may have introduced an interesting exploratory element to our analysis, we opted to remove these observations from the data to improve the overall clarity of our work and analysis.</p>
+
+					<h3>Coherence</h3>
+					<p>Upon reviewing the data and analyzing it in R, we found the the data was largely coherent with itself. For instance, we found that the number of games played by any team in a given year does not exceed seven games, which exactly aligns with the maximum number of games played in the tournament from the Group Stage to the final match. This being said, when integrating the two data sets, we did notice that many countries were listed differently. For example, one of the datasets referred to the Democratic Republic of Congo as Zaire, which is historically correct but currently inaccurate. This led to some minor issues when joining the dataset; however, we circumvented this dilemma by manually recoding any factor levels that have changed to more current forms. Additionally, as previously mentioned, the format of the tournament continues to change slightly from year to year. While the World Cup remained largely consistent over the selected time period for our analysis, some minor recoding was required in order to ensure the levels of the tournament remained consistent from year to year.
+
+					</p>
+
+					<h3>Correctness</h3>
+					<p>Due to the pseudo-crowdsourcing nature of the Kaggle dataset, we believe that this data is mostly correct. Similar to Wiikipedia, the Kaggle repository may be updated my members of the data science community, which might introduce some incorrect information to these files. However, since these “bad actors” are likely the minority, any incorrect changes to the data would likely either be changed by other members of the community or overridden by the staff at Kaggle whose responsibilities include the maintenance of the accuracy of these publically available data sources. Moreover, we can verify many of the data points in these data sets by simply searching the internet for game-by-game statistics. Finally, the ELO data we use in our model is derived through a formula, however the site author providing these statistics also includes his/her methodology for calculating these ratings.
+					</p>
+
+					<h3>Accountability</h3>
+					<p>Despite the potential lapses in accountability associated with crowdsourcing information, Kaggle maintains a relatively comprehensive log on any changes done to the data and the subsequent edits actually accepted by the Kaggle staff. Therefore, the Kaggle data is accountable and the primary sources for this information are included in the body of their methodology. The ELO ratings data is less direct in citing the primary sources of its data although it might be assumed that it is pulling information from the similar game-by-game sources cited on Kaggle. For these reasons, we believe that this data is mostly accountable, but we hold some reservations regarding the original source of the information presented on ELO ratings. 
+					</p>
+
+				</div>
+				
+			</div>
+			
+			<br>
+			<hr>
+	    </div> <!--/ .container -->
+	</div><!--/ #4Cswrap -->
+	
 	<!-- FEATURES WRAP -->
 	<div id="features">
 		<div class="container">
 			<div class="row">
-				<h1 class="centered">Exploring data</h1>
+				<h1 class="centered">Data Exploration</h1>
 				<br>
 				<br>
 				<div class="col-lg-6">
