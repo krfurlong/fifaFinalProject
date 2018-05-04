@@ -207,9 +207,7 @@
 		                    </div><!-- /accordion-heading -->
 		                    <div id="collapseOne" class="accordion-body collapse in">
 		                        <div class="accordion-inner">
-								<p>The primary variables that we included in our analysis were World rank, 
-									ELO ranking, win ration, lose ratio, draw ratio, mean goals scored per game, 
-									and mean goals allowed per game.</p>
+								<p>The primary variables that we included in our analysis were world rank, ELO ranking, win ration, lose ratio, draw ratio, the average number of goals scored per game, and the average number of goals allowed per game.</p>
 								</div><!-- /accordion-inner -->
 		                    </div><!-- /collapse -->
 		                </div><!-- /accordion-group -->
@@ -218,19 +216,12 @@
 		                <div class="accordion-group">
 		                    <div class="accordion-heading">
 		                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
-		                        Correlation Overview
+		                        Feature Engineering
 		                        </a>
 		                    </div>
 		                    <div id="collapseTwo" class="accordion-body collapse">
 		                        <div class="accordion-inner">
-								<p>We found three interesting correlations between relevant variables. 
-									Teams that play more games tend to have a higher lose score, 
-									except for some outliers such as Croatia, and Ukraine, and Slovenia. 
-									Also, those teams that play more have a much lower draw ration. 
-									The data also shows a negative correlation between the ELO rating and the World rank, 
-									which means that teams with high-performance individual figures do not necessarily get the best group scores. 
-									Finally, there is not a clear relationship between win ration and world rank, 
-									which means that the world rank takes into account other variables besides win ratio.</p>
+								<p>While our raw data sources provided some of these key variables, we used feature engineering to derive some potentially more meaningful predictors in our analysis. For instance, the average goals scored per game was actually derived through a simple division of the total number of goals a team scored in a given year by the total number of games that team played. Additionally, we derived a series of six rolling sums for each team to track how many appearances that team had made at each particular stage of the tournament (Group Stage, Field of 16, Quarterfinals, Semifinals, Finals, Champion). These variables were motivated by our belief that teams who do best in the tournament this year might also be the teams that historically performed well on this international stage.</p>
 								</div><!-- /accordion-inner -->
 		                    </div><!-- /collapse -->
 		                </div><!-- /accordion-group -->
@@ -239,12 +230,13 @@
 		                 <div class="accordion-group">
 		                    <div class="accordion-heading">
 		                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
-		                        Data Limitations
+		                        Correlation Overview
 		                        </a>
 		                    </div>
 		                    <div id="collapseThree" class="accordion-body collapse">
 		                        <div class="accordion-inner">
-								<p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+								<p>We found three interesting correlations between relevant variables. First, teams that play more games tend to lose games more frequently, apart from a few outliers such as Croatia, and Ukraine, and Slovenia. Interestingly, these teams that play more games in a given year also see a fewer share of their games result in a tie match, or a draw. The data also logically shows a negative correlation between the ELO rating and the World rank, which means that teams that play more challenging opponents and win are given a higher ELO rating and their rank on the world stage improves, with a rank of 1 representing the best team in the world in that given year. Finally, there is only a slightly negative relationship between win ratio and world rank, which suggests that rank takes into account other variables besides win ratio. We invite the user to explore these relationships and other potentially interesting correlations between key variables in our model using the customizable scatter-plot that accompanies this analysis. 
+						</p>
 								</div><!-- /accordion-inner -->
 		                    </div><!-- /collapse -->
 		                </div><!-- /accordion-group -->
@@ -258,7 +250,8 @@
 		                    </div>
 		                    <div id="collapseFour" class="accordion-body collapse">
 		                        <div class="accordion-inner">
-								<p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+								<p>There are different extensions of this study that might be interesting but that out of the scope of this particular exercise. For example, it might be interesting to measure if there is home-field advantage for World Cup hosts countries. In general, people believe that host countries have an advantage over other teams given that part of the tournament’s revenue is generated by ticket sales and that turnout for the home team often dwarfs the attendance of other nations. Additionally, future analysis might incorporate other facets the structure of the tournament and performance metrics such as penalty card records, offensive/defensive strategies across teams, and the monetary value of each time as measured by each individual player’s salary when they play on the non-national team (ex. FC Barcelona, Manchester United, etc.). While these metrics may have improved the predictive power of our machine learning algorithms, the data quality concerns presented in cleaning these sources proved intractable given the scope of this analysis.
+						</p>
 								</div><!-- /accordion-inner -->
 		                    </div><!-- /collapse -->
 		                </div><!-- /accordion-group -->
