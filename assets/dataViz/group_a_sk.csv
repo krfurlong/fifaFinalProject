@@ -1,0 +1,9 @@
+source,target,value,color
+Uruguay,Advance,0.692307692,darkred
+Saudi Arabia,Advance,0.153846154,indianred
+Russia,Advance,0.076923077,lightsalmon
+Egypt,Advance,0.076923077,mistyrose
+Uruguay,Out,0.307692308,darkred
+Saudi Arabia,Out,0.846153846,indianred
+Russia,Out,0.923076923,lightsalmon
+Egypt,Out,0.923076923,mistyrose
