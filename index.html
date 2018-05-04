@@ -588,7 +588,11 @@
 				<br>
 				<br>
 <div class="col-lg-6">
-		<style>
+	<script src="assets/dataViz/d3.v3.min.js"></script>
+	<div id="area1a"></div>
+        <h3><b>Group A</b></h3>
+	<script src="assets/js/sankey.js"></script>
+	<style>
 				path {
 				  stroke: white;
  				  stroke-width: 0.25px;
@@ -627,12 +631,6 @@
 				  pointer-events: none;         
 				}
 				</style>
-
-<script src="assets/dataViz/d3.v3.min.js"></script>
-<script src="assets/js/sankey.js"></script>
-	
-     <div id="area1a">
-	     <h3><b>Group A</b></h3>
 	     <script>
 	
 // sankey //
@@ -774,7 +772,6 @@ node.on("mouseover", function(d) {
 
 	     </div>
 			
-<div id="chart"></div>
 
 		</div>
 	</div>
