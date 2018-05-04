@@ -387,6 +387,36 @@
 		</div><!--/ .container -->
 	</div><!--/ #stats by groups -->
 	
+	<div id="prediction">
+		<div style="background-color: #2f2f2f">
+		<div class="container">
+			<div class="row centered">
+				<h1 style="color: white">World Cup Classification using Machine Learning</h1>
+			</div>
+			<div class = "row">
+				<br>
+				<div class="col-lg-12">
+					<p style="color: white">The task of predicting performance in athletic tournaments is becoming increasingly common as machine learning continues to grow in popularity and user-friendliness. For instance, in the United States, formulating algorithms to predict wins and losses in the NCAA March Madness tournament is a fun yet challenging problem for any young and curious data scientist. This is not to say this is an easy problem to solve however. In any athletic competition, but particularly football (i.e. soccer), it is incredibly difficult to predict how one team will play given the skills of their opponent. Moreover, if the algorithms employed attempt to characterize this between-team interaction effect, then the samples used for model training and validation must also include at least one instance of these interactions. Unfortunately, given the ever changing composition of the tournament, this interaction-based approach is impossible since some of the teams in the current tournament have never played against one another.  
+					</p>
+					<p style="color: white">
+					Therefore, we approached this problem through another, albeit simplified, approach to only consider factors for each team without considering the qualities of their opponents. In particular, we included variables, performance metrics, and engineered features detailed in the sections above in order to best characterize how well that specific team played across all of its games in the year leading up to the FIFA World Cup and its associated qualifying tournament. From this point, we shifted the focus of the analysis from a more traditional 0-1/Win-Loss prediction problem which might employ a logistic regression to a multi-class classification problem. Our reasoning for avoiding the Win-Loss prediction problem rested on the fact that the tournament’s format is somewhat difficult to represent in statistical software given the mix of the round robin aspect of the tournament before the elimination round begins. Therefore, we instead opted to probabilistically classify teams into one of six categories: Group Stage, Field of 16, Quarterfinals, Semifinals, Finals, or FIFA Champion. In practice, our classification model identifies the stage of the tournament that each specific team is most likely to reach. For instance, if Argentina was classified into the Semifinals stage, then we would predict Argentina to progress successfully  through the Group Stage (round robin), Field of 16, and the Quarterfinals before losing to some opponent in the Semifinals. 
+					</p>
+					<p style="color: white">
+					Given these stipulations, we set to implement our multi-class classification problem using two algorithms: a Support Vector Machine in the e1071 package of R and a Random Forest model in the randomForest library in R. Before implementing these models, we held out about 30% of our data as a test set to be used in calculating predictive accuracy of these models. Following the implementation of the models, we opted to further refine, tune, and use our Random Forest model as its predictions tended to be more optimistic as opposed to the slightly more pessimistic predictions of the support vector machine. More importantly, we found our 10-fold cross validation error was slightly lower when using the Random Forest model and yielded a predictive accuracy of approximately 60%. Since predictive accuracy only captures the proportion of items that fall on the diagonal, we believe that given the structure of the tournament, the actual predictive accuracy of our Random Forest model is likely higher. Future analysis includes potentially developing another script to reweight the class predictions from our model under the structure of the tournament in order to calculate these more accurate predictions.
+					</p>
+					<p style="color: white">
+					Clearly, this approach to predicting outcomes in the World Cup is not entirely accurate or appropriate given the structure of the tournament. For instance, if unadjusted, our model might predict a country to reach the Finals with a 20% probability and would win the World Cup with a probability of 10%. Therefore, in practice, we “rolled” these predictions back in order to calculate the adjusted probability that each country reach each particular stage in the tournament. In this previous case, for example, that particular nation would still have only a 10% chance of winning the World Cup, but their adjusted likelihood of reaching the Finals would rise to 20% + 10% = 30%, and similarly for the Group Stage, Field of 16, Quarterfinals, and Semifinals. Our R script used for implementing this process is available upon request, but presenting these model results visually helps support the intuition behind our process. For these reasons, we present our model results graphically and in a tabular sense below.
+					</p>
+
+				</div>
+			</div>
+			</div>
+			
+			<br>
+			<hr>
+	    </div> <!--/ .container -->
+	</div><!--/ #4Cswrap -->
+	
 	<section id="summary" name="summary"></section>
 	<div id="summary">
 		<div class="container">
